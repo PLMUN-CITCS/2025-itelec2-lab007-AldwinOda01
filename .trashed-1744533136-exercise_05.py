@@ -21,10 +21,5 @@ print(f"User number * 2  = {multiplication:.2f}")
 print(f"User number / 3  = {division:.2f}")
 
 print("\nMath Library Functions:")
-# Ensure square root is formatted correctly to match expected output
-if isinstance(sqrt_value, str):
-    print(f"Square root of {user_number:.2f} is: {sqrt_value}")
-else:
-    print(f"Square root of {user_number:.2f} is: {format(sqrt_value, '.1f')}")  # Use format() for single decimal place without extra zeros
-
+print(f"Square root of {user_number:.2f} is: {sqrt_value}" if isinstance(sqrt_value, str) else f"Square root of {user_number:.2f} is: {sqrt_value:.2f}")
 print(f"Sine of {user_number:.2f} degrees is: {sine_value:.4f}")  # Sine formatted to 4 decimal places
